@@ -13,6 +13,6 @@ import java.util.Map;
 public class SimulationNotificationRequest {
     private String task_id;
     private String status;
-    private Map<String, Object> results;
+    private Map<String, Object> results; // result is a dict, where {time(s):{output_variables_of_Simulation}}
     private String error;
 }
