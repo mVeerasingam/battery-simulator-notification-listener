@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Map;
 
 @Data
 @AllArgsConstructor
@@ -12,6 +13,6 @@ import java.util.List;
 public class SimulationNotificationRequest {
     private String task_id;
     private String status;
-    private List<Object> results;
+    private Map<String, Object> results;
     private String error;
 }
