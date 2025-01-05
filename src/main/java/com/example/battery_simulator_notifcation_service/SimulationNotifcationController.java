@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SimulationNotifcationController {
-
     private static final Logger logger = LoggerFactory.getLogger(SimulationNotifcationController.class);
     @PostMapping("/notification")
     public ResponseEntity<String> receiveWebhook(@RequestBody SimulationNotificationRequest request) {
