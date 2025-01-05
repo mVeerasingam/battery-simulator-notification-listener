@@ -1,4 +1,5 @@
 package com.example.battery_simulator_notifcation_service;
+import com.example.battery_simulator_notifcation_service.DTO.SimulationResults;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SimulationNotifcationController {
     private static final Logger logger = LoggerFactory.getLogger(SimulationNotifcationController.class);
     @PostMapping("/notification")
-    public ResponseEntity<String> receiveWebhook(@RequestBody SimulationNotificationRequest request) {
+    public ResponseEntity<String> receiveWebhook(@RequestBody SimulationResults request) {
 
         logger.info("Received Simulation Notification for: " + request.getSimulation_id() + ", Status: " + request.getStatus());
 
