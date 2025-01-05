@@ -18,6 +18,6 @@ public class SimulationResults {
     private String taskId;
 
     private String status;
-    private Map<String, Object> results; // result is a dict, where {time(s):{output_variables_of_Simulation}}
+    private Map<String, Map<String, Object>> results;
     private String error;
 }

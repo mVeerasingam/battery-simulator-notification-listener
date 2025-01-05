@@ -10,18 +10,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SimulationNotifcationController {
-    private static final Logger logger = LoggerFactory.getLogger(SimulationNotifcationController.class);
-    @PostMapping("/notification")
-    public ResponseEntity<String> receiveWebhook(@RequestBody SimulationResults request) {
 
-        logger.info("Received Simulation Notification for: " + request.getSimulation_id() + ", Status: " + request.getStatus());
-
-        if("success".equals(request.getStatus())) {
-            logger.info("Simulation successful. Results: " + request.getResults());
-        } else {
-            logger.info("Simulation failed. Error: " + request.getError());
-        }
-
-        return new ResponseEntity<>("Notification received", HttpStatus.OK);
-    }
 }
