@@ -20,7 +20,6 @@ public class SimulationResultsConsumer {
     @RabbitListener(queues = "simulation_results")
     public void consumeMessage(String message) {
         try {
-            System.out.println(message);
             // Deserialize the message into SimulationResults object
             SimulationResults results = objectMapper.readValue(message, SimulationResults.class);
 
